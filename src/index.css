@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+  .nav-hover {
+    @apply hover:bg-gray-200 hover:w-screen hover:text-center hover:py-3
+  }
+  .input-field {
+    @apply w-64 bg-gray-100 font-medium placeholder:text-sm focus:outline-none
+  }
+}
