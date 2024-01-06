@@ -8,9 +8,9 @@ const SignUp = () => {
                         <h1 className="text-5xl font-semibold text-gray-600 md:text-6xl md:mb-10">Sign Up</h1>
                     </div>
                     <form className="flex flex-col space-y-5 overflow-hidden">
-                        <input className="input-field p-2 md:w-80" type="text" placeholder="Name" />
-                        <input className="input-field p-2 md:w-80 " type="email" placeholder="Email" />
-                        <input className="input-field p-2 md:w-80" type="password" placeholder="Password" />
+                        <input className="w-64 bg-gray-100 font-medium placeholder:text-sm  focus:outline-none p-2 md:w-80" type="text" placeholder="Name" />
+                        <input className="w-64 bg-gray-100 font-medium placeholder:text-sm  focus:outline-none p-2 md:w-80 " type="email" placeholder="Email" />
+                        <input className="w-64 bg-gray-100 font-medium placeholder:text-sm  focus:outline-none p-2 md:w-80" type="password" placeholder="Password" />
                         <input className="text-white rounded-sm font-semibold cursor-pointer p-2 bg-blue-500 active:bg-blue-600 hover:bg-blue-400" type="submit" value={"Sign Up"} />
                         <p className="text-sm font-medium text-center">Already have an account? <a className="text-blue-500" href="">Sign In</a></p>
                     </form>

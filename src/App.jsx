@@ -31,8 +31,8 @@ const App = () => {
   return (
     <>
       <div>
-        <Navigation />
-        <SignUp />
+        {/* <Navigation /> */}
+        {/* <SignUp /> */}
         <Login />
       </div>
     </>

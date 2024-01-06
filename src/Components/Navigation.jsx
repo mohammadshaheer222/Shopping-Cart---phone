@@ -46,6 +46,7 @@ const Navigation = () => {
           {isOpen ? (
             <div>
               <div className="h-screen text-lg font-medium flex flex-col gap-20 justify-center items-center bg-white fixed top-0 left-0 right-0 md:hidden">
+              {/* <div className={`${isOpen ? 'h-screen' : 'h-0 overflow-hidden'} transition-all duration-500 ease-out`}> */}
                 <a className="hover:text-gray-500" href="">
                   Home
                 </a>
