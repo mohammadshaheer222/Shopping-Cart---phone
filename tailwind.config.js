@@ -5,5 +5,10 @@ export default {
     extend: {
     },
   },
+  variants: {
+    extends: {
+      lineClamp: ['hover'],
+    },
+  },
   plugins: [require('@tailwindcss/aspect-ratio'),],
 };

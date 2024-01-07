@@ -7,7 +7,7 @@
     @apply bg-gray-100 font-medium placeholder:text-sm  focus:outline-none p-2
   }
   .btn {
-    @apply text-white rounded-sm font-semibold cursor-pointer p-2
+    @apply text-white rounded-sm font-semibold cursor-pointer 
   }
   .btn-primary {
     @apply bg-blue-500 active:bg-blue-600 hover:bg-blue-400

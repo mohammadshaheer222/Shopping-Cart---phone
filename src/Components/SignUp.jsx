@@ -12,7 +12,7 @@ const SignUp = () => {
                         <input className="w-64 input-field md:w-80" type="text" placeholder="Name" />
                         <input className="w-64 input-field md:w-80 " type="email" placeholder="Email" />
                         <input className="w-64 input-field md:w-80" type="password" placeholder="Password" />
-                        <input className="btn btn-primary" type="submit" value={"Sign Up"} />
+                        <input className="btn btn-primary p-2" type="submit" value={"Sign Up"} />
                         <p className="text-sm font-medium text-center text-gray-500">Already have an account? <Link className="text-blue-500" to="/login">Login</Link></p>
                     </form>
                     
