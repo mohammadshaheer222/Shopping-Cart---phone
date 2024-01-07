@@ -24,7 +24,7 @@ const Shop = ({ data }) => {
                   </h1>
                 </div>
                 <div className="text-center ">
-                  <p className="text-gray-700 text-base font-semibold">
+                  <p className="text-gray-700 text-base  font-semibold">
                     ₹{data.price}
                   </p>
                 </div>
