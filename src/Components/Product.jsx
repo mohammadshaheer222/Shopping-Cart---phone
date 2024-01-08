@@ -1,37 +1,44 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 const Product = () => {
-    const params = useParams();
-    const [details, setDetails] = useState({})
+  const params = useParams();
+  const [details, setDetails] = useState([]);
 
-    const fetchDetails = async() => {
-        const response = await 
-        fetch(`https://fakestoreapi.com/products/${params.id}`)
-        const data = await response.json();
-        setDetails(data)
-        console.log(details,"hai")
-      }
-      useEffect(() => {
-        fetchDetails()
-      }, [params.id]);
+  const fetchDetails = async () => {
+    const response = await fetch(
+      `https://fakestoreapi.com/products/${params.id}`
+    );
+    const data = await response.json();
+    setDetails([data]);
+  };
+  useEffect(() => {
+    fetchDetails();
+  }, [params.id]);
 
-    return(
-        <>
+  return (
+    <>
+      <div>
+        {details.map((details) => (
+          <div className="p-5 space-y-6">
             <div>
-                <div>
-                    <div className="text-center py-4">
-                        <h1 className="text-2xl font-bold">{details.title}</h1>
-                    </div>
-                    <div className="w-screen px-10 py-2 ">
-                        <img className="w-full h-64"  src={`${details.image}`} alt="" />
-                    </div>
-                    <div className="bg-gray-200 p-5 space-y-5">
-                        <p className="text-base ">{details.description}</p>
-                        <p className="text-xl font-bold">₹{details.price}</p>
-                    </div>
-                </div>
+              <h1 className="text-xl font-semibold">{details.title}</h1>
+              <p className="text-sm font-medium">{details.category}</p>
+              <h2 className="font-semibold mt-3">${details.price}</h2>
+              <p className="text-sm text-gray-500 font-medium">
+                incl. of taxes <br />
+                (Also includes all applicable duties)
+              </p>
             </div>
-        </>
-    )
-}
+
+            <div className="flex flex-col justify-center items-center gap-5">
+              <img className="w-80 h-96" src={`${details.image}`} alt="" />
+              <p className="text-sm">{details.description}</p>
+              <button className="btn btn-black p-2 w-full">Add to Cart</button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+};
 export default Product;

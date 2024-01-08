@@ -6,6 +6,7 @@ import Login from "./Components/Login";
 import Home from "./Components/Home";
 import Shop from "./Components/Shop";
 import Product from "./Components/Product";
+import AddToCart from "./Components/AddToCart";
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -27,6 +28,7 @@ const App = () => {
             <Route index element={<Home />} />
             <Route path="shop" element={<Shop data={data}/>} />
             <Route path="product/:id" element={<Product />} />
+            <Route path="addtocart/:id" element={<AddToCart />}/>
           </Route>
           <Route path="signup" element={<SignUp />} />
           <Route path="login" element={<Login />} />

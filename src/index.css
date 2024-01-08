@@ -7,10 +7,13 @@
     @apply bg-gray-100 font-medium placeholder:text-sm  focus:outline-none p-2
   }
   .btn {
-    @apply text-white rounded-sm font-semibold cursor-pointer 
+    @apply rounded-sm font-semibold cursor-pointer 
   }
   .btn-primary {
-    @apply bg-blue-500 active:bg-blue-600 hover:bg-blue-400
+    @apply text-white bg-blue-500 active:bg-blue-600 hover:bg-blue-400
+  }
+  .btn-black {
+    @apply bg-black text-white hover:bg-gray-600 active:bg-gray-800
   }
   .line-break {
     @apply grid grid-cols-3 items-center gap-2 before:h-[2px] before:bg-gray-200 before:block after:h-[2px] after:bg-gray-200 after:block 

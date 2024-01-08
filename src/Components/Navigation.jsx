@@ -19,11 +19,10 @@ const Navigation = () => {
   return (
     <>
       <div className="space-y-10">
-        <div>
-          <nav className="flex justify-between items-center py-2 px-4 bg-gray-100 shadow-md shadow-gray-200 fixed top-0 left-0 right-0 z-10">
+          <nav className="flex justify-between items-center py-2 px-4 bg-gray-100 shadow-md shadow-gray-200 fixed top-0 left-0 right-0 z-20">
             <div className="md:flex md:items-center space-x-10">
                 <h3 className="text-lg font-bold tracking-widest uppercase">
-                  Insta Mart
+                  Shopping Cart
                 </h3>
               <div className="hidden md:block md:space-x-5 md:font-medium md:text-sm">
                 <Link className="hover:text-gray-500 px-3" to="/">
@@ -50,7 +49,7 @@ const Navigation = () => {
           </nav>
           {isOpen ? (
             <div>
-              <div className="h-screen text-lg font-medium flex flex-col gap-20 justify-center items-center bg-white fixed top-0 left-0 right-0 md:hidden">
+              <div className="animate-open-menu h-screen text-lg font-medium flex flex-col gap-20 justify-center items-center bg-white fixed top-0 left-0 right-0 md:hidden">
                 <Link onClick={isClose} className="hover:text-gray-500" to="/">
                   Home
                 </Link>
@@ -65,7 +64,6 @@ const Navigation = () => {
           ) : (
             ""
           )}
-        </div>
       <Outlet />
       </div>
     </>
