@@ -30,10 +30,10 @@ const Product = () => {
               </p>
             </div>
 
-            <div className="flex flex-col justify-center items-center gap-5">
-              <img className="w-80 h-96" src={`${details.image}`} alt="" />
+            <div className="flex flex-col justify-center items-center gap-6">
+              <img className="w-80 h-96 bg-gray-500" src={`${details.image}`} alt="" />
+              <button className="btn btn-black p-2 w-full">Add to Cart</button> 
               <p className="text-sm">{details.description}</p>
-              <button className="btn btn-black p-2 w-full">Add to Cart</button>
             </div>
           </div>
         ))}
